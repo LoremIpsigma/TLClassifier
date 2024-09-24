@@ -53,7 +53,7 @@ Run the data through the preprocess function
 
 Load the model
 
-``` model = xgboost.Booster() ```
+``` model = xgb.Booster() ```
 ``` model.load_model('model.json') ```
 
 Create DMatrix for data
