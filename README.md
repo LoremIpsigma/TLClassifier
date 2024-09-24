@@ -8,7 +8,7 @@ and the createdat_ts features - this provided upper and lower duration limits of
 I also took the difference between authorizing_at and createdat_ts to see how long the initiation of authorization took, perhaps longer times to get to this stage indicated possible failure.
 Lastly I took the difference between authorized_at and authorizing_at in the possiblity that longer durations between the two could provide further insight to the outcome of the payment.
 In all cases I replaced the NaT values with NaN values as models I had in mind could not work with NaT types.
-The categorical features for the most part had a wide range of categories (~ > 20). The range of categories in addition to the numerical features led me to choose a model at this stage, which happened to be XGBoost as it lends itself to situations like this quite nicely.
+The categorical features for the most part had a wide range of categories (~ > 20). The range of categories in addition to the numerical features led me to choose a model at this stage, which happened to be XGBoost as it lends itself to situations like this quite nicely which is why there also isn't any scaling of sorts as XGBoost models are invariant to scale unlike linear regression models for example
 
 
 The next step was to create a training and test set, I used sklearn's train_test_split function for this, keeping 80% of the data for training.
