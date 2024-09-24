@@ -56,7 +56,10 @@ Load the model
 ``` model = xgboost.Booster() ```
 ``` model.load_model('model.json') ```
 
+Create DMatrix for data
+
+``` data = xgb.DMatrix(processed[model.feature_names], enable_categorical=True) ```
 
 Predict
 
-``` y_pred = model.predict(processed[model.feature_names]) ``` 
+``` y_pred = model.predict(data) ``` 
